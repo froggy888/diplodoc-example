@@ -1,0 +1,475 @@
+animated: true
+form: 'contact-sales'
+background:
+  image: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/main-visual/main.png'
+  video: 
+    src:
+    - 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/main-visual/main_video.webm'
+    - 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/main-visual/main_video.ogv'
+    - 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/main-visual/main_video.mp4'
+    - 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/main-visual/mobile.png'
+  height: 620
+  size: 'contain'
+  color: '#f5f5f5'
+blocks:
+
+  - type: 'header-block'
+    width: 'm'
+    offset: 'large'
+    title: 'Yandex Cloud'
+    description: 'Облачная платформа, где каждый может создавать и совершенствовать свои цифровые сервисы, используя инфраструктуру и уникальные технологии Яндекса.'
+    buttons:
+    - text: 'Подключиться'
+      when: region != 'kz'
+      size: 'promo'
+      theme: 'accent'
+      url: 'https://console.cloud.yandex.${tld}/'
+    - text: 'Связаться с нами'
+      when: region != 'kz'
+      theme: 'pseudo'
+      size: 'promo'
+      url: '/?utm_content=main#contact-form'
+# Кнопки для казахстана
+    - text: 'Связаться с нами'
+      when: region == 'kz'
+      size: 'promo'
+      theme: 'accent'
+      url: '/#contact-form'
+    - text: 'Подключиться'
+      when: region == 'kz'
+      size: 'promo'
+      theme: 'pseudo'
+      url: 'https://console.cloud.yandex.${tld}/'
+
+
+  - type: 'slider-block'
+    animated: false
+    randomOrder: true
+    children:
+    - type: 'service-card'
+      title: 'Инфраструктура и сеть'
+      description: 'Виртуальные вычислительные и сетевые ресурсы, которые масштабируются по требованию. Станут основой для облачных вычислений, создания высоконагруженных распределенных систем и размещения корпоративных приложений.'
+      services:
+      - name: 'Compute Cloud'
+        id: 'compute'
+        url: '/services/compute'
+      - name: 'Object Storage'
+        id: 'storage'
+        url: '/services/storage'
+      - name: 'Cloud Interconnect'
+        id: 'interconnect'
+        url: '/services/interconnect'
+      link:
+        text: 'Все сервисы'
+        url: '/services#infrastructure-network'
+    - type: 'service-card'
+      title: 'Платформа данных'
+      description: 'Технологии хранения, обработки и визуализации данных любого типа и объема. Служат масштабируемым бэкендом для веб-приложений и инструментом для создания и поддержки корпоративных хранилищ и 1С в облаке.'
+      services:
+      - name: 'Managed Service for PostgreSQL'
+        id: 'managed-postgresql'
+        url: '/services/managed-postgresql'
+      - name: 'Managed Service for ClickHouse'
+        id: 'managed-clickhouse'
+        url: '/services/managed-clickhouse'
+      - name: 'DataLens'
+        id: 'datalens'
+        url: '/services/datalens'
+      link:
+        text: 'Все сервисы'
+        url: '/services#data-platform'
+    - type: 'service-card'
+      title: 'Контейнерная разработка'
+      description: 'Удобные инструменты для создания контейнерных приложений и микросервисов. Помогают строить процессы CI/CD и легко интегрироваться с другими сервисами платформы.'
+      services:
+      - name: 'Managed Service for Kubernetes®'
+        id: 'managed-kubernetes'
+        url: '/services/managed-kubernetes'
+      - name: 'Container Registry'
+        id: 'container-registry'
+        url: '/services/container-registry'
+      link:
+        text: 'Все сервисы'
+        url: '/services#containers'
+    - type: 'service-card'
+      title: 'Бессерверные вычисления'
+      description: 'Сервисы для хранения данных и разработки приложений без создания и обслуживания виртуальных машин. Позволят легко создавать автоматически масштабируемые системы, работать с бессерверными вычислениями и интернетом вещей.'
+      services:
+      - name: 'Cloud Functions'
+        id: 'functions'
+        url: '/services/functions'
+      - name: 'Yandex Database'
+        id: 'ydb'
+        url: '/services/ydb'
+      - name: 'Message Queue'
+        id: 'message-queue'
+        url: '/services/message-queue'
+      link:
+        text: 'Все сервисы'
+        url: '/services#serverless'
+    - type: 'service-card'
+      title: 'Безопасность'
+      description: 'Инструменты для управления безопасностью вашей облачной инфраструктуры. Помогут защитить ваши приложения от DDOS-атак, управлять доступами, сертификатами и ключами.'
+      services:
+      - name: 'Key Management Service'
+        id: 'kms'
+        url: '/services/kms'
+      - name: 'DDoS Protection'
+        id: 'ddos-protection'
+        url: '/services/ddos-protection'
+      - name: 'Certificate Manager'
+        id: 'certificate-manager'
+        url: '/services/certificate-manager'
+      link:
+        text: 'Все сервисы'
+        url: '/services#security'
+    - type: 'service-card'
+      title: 'Машинное обучение'
+      description: 'Сервисы на основе машинного обучения и инструменты для разработки и запуска собственных моделей данных. Предоставят облачные вычислительные ресурсы и среду для ML‑разработки, позволят использовать синтез и распознавание речи, машинный перевод и анализ изображений.'
+      services:
+      - name: 'DataSphere'
+        id: 'datasphere'
+        url: '/services/datasphere'
+      - name: 'SpeechKit'
+        id: 'speechkit'
+        url: '/services/speechkit'
+      - name: 'Translate'
+        id: 'translate'
+        url: '/services/translate'
+      link:
+        text: 'Все сервисы'
+        url: '/services#ml-ai'
+    - type: 'service-card'
+      title: 'Бизнес-инструменты'
+      description: 'Инструменты для построения бизнес-процессов - от визуализации данных до организации работы команды. Сделают совместную работу удобной и эффективной, а процессы прозрачными.'
+      services:
+      - name: 'DataLens'
+        id: 'datalens'
+        url: '/services/datalens'
+      - name: 'Tracker'
+        id: 'tracker'
+        url: '/services/tracker'
+      link:
+        text: 'Все сервисы'
+        url: '/services#business-tools'
+
+  - type: 'companies-block'
+    when: region != 'kz'
+    title: 'Компании, которые нам доверяют'
+    images:
+      desktop: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/logos-desktop-ru.svg'
+      tablet: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/logos-tablet-ru.svg'
+      mobile: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/logos-mobile-ru.svg'
+
+  - type: 'companies-block'
+    when: region == 'kz'
+    title: 'Компании, которые доверяют Yandex Cloud'
+    images:
+      desktop: 'https://storage.yandexcloud.net/cloud-www-assets/cloudboost/new_design/cloud-boost-kz-logos-desktop.svg'
+      tablet: 'https://storage.yandexcloud.net/cloud-www-assets/cloudboost/new_design/cloud-boost-kz-logos-tablet.svg'
+      mobile: 'https://storage.yandexcloud.net/cloud-www-assets/cloudboost/new_design/cloud-boost-kz-logos-mobile.svg'
+
+  - type: 'banner-card'
+    image: "https://storage.yandexcloud.net/cloud-www-assets/constructor/services/tracker/tracker-migration-banner-1.png"
+    disableCompress: true
+    title: "Встречайте обновленный Yandex Tracker"
+    subtitle: "Мы обновили интерфейс и сделали совместную работу ваших команд ещё удобнее."
+    color: "#DEE4FF"
+    button:
+      theme: accent
+      text: "Узнать больше"
+      url: "/services/tracker"
+
+  - type: 'slider-block'
+    when: region != 'kz'
+    title:
+      text: 'Удобные интерфейсы для решения ваших задач'
+    description: "Легко подключайте и настраивайте нужные сервисы в консоли управления. Установите интерфейс командной строки (CLI) или управляйте ресурсами через Terraform. В подробной документации найдутся все необходимые пошаговые руководства."
+    slidesToShow: 1
+    randomOrder: true
+    children:
+    - type: 'media-card'
+      image: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/console-main_2x.png'
+    - type: 'media-card'
+      image: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/console-datalens-2x.png'
+    - type: 'media-card'
+      image: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/console-monitoring-2x.png'
+    - type: 'media-card'
+      image: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/mobile_app_x2.png'
+
+  - type: 'slider-block'
+    when: region == 'kz'
+    title:
+      text: 'Удобные интерфейсы для решения ваших задач'
+    description: "Легко подключайте и настраивайте нужные сервисы в консоли управления. Установите интерфейс командной строки (CLI) или управляйте ресурсами через Terraform. В подробной документации найдутся все необходимые пошаговые руководства."
+    slidesToShow: 1
+    randomOrder: true
+    children:
+    - type: 'media-card'
+      image: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/console-main-2x.png'
+    - type: 'media-card'
+      image: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/KZ/console-datalens-main-kz.png'
+    - type: 'media-card'
+      image: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/console-monitoring-2x.png'
+
+  - type: 'security-block'
+    title: 'Данные хранятся надёжно и безопасно'
+    points: 
+    - text: 'Вы можете развернуть свои проекты в трёх географически распределённых дата-центрах — на их основе работают сайты и приложения самого Яндекса.'
+      img: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/mailn-availability-zones.svg'
+    - text: 'Серверные стойки для дата-центров мы проектируем и собираем сами так, чтобы они могли выдержать любую нагрузку.'
+      img: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/main-datacenter.svg'
+    - text: 'Наша платформа соответствует требованиям о хранении персональных данных PCI DSS, GDPR, 152-ФЗ РФ и индустриальных стандартов ISO.'
+      img: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/main-secure-clouds.svg'
+      link: 
+        text: 'Сертификаты и стандарты'
+        url: '/security'
+    media: 
+      youtube: 'xbNPpD43uvE'
+
+  - type: 'media-block'
+    when: region != 'kz'
+    direction: 'media-content'
+    title: 'Вы всегда знаете, сколько потратили и на что'
+    description: 'Тарифы Yandex Cloud подойдут как высоконагруженным сервисам больших компаний, так и небольшим проектам со скромными требованиями. Платите только за используемые ресурсы или зарезервируйте их определённый объём на 1 или 3 года. Для этого обратитесь к своему аккаунт-менеджеру или в техподдержку.'
+    media:
+      video:
+        src:
+        - 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/main-calcx2.mp4'
+        - 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/main-calcx2.webm'
+        - 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/main-calcx2.ogv'
+        - 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/calc.png'
+        loop:
+          start: 0
+      image: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/calc.png'
+    button:
+      text: 'Рассчитать стоимость'
+      theme: 'pseudo'
+      url: '/prices#calculator'
+
+  - type: 'media-block'
+    when: region == 'kz'
+    direction: 'media-content'
+    title: 'Вы всегда знаете, сколько потратили и на что'
+    description: 'Тарифы Yandex Cloud подойдут как высоконагруженным сервисам больших компаний, так и небольшим проектам со скромными требованиями. Платите только за используемые ресурсы или зарезервируйте их определённый объём на 1 или 3 года. Для этого обратитесь к своему аккаунт-менеджеру или в техподдержку.'
+    media:
+      video:
+        src:
+        - 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/KZ/main-calc-kz.mp4'
+        - 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/KZ/main-calc-kz.gif'
+        - 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/KZ/main-calc-kz.ogv'
+        - 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/KZ/main-calc-kz.webm'
+        - 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/KZ/main-calc-kz.png'
+        loop:
+          start: 0
+      image: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/KZ/main-calc-kz-x2.png'
+    button:
+      text: 'Рассчитать стоимость'
+      theme: 'pseudo'
+      url: '/prices#calculator'
+
+  - type: 'media-block'
+    direction: 'content-media'
+    title: 'Вы никогда не останетесь одни'
+    description: 'Служба поддержки ответит на любые вопросы, связанные с настройкой Yandex Cloud. Пользователи расширенных тарифных планов получают помощь в режиме 24/7. Поддержка предоставляется на русском и английском языках. Для создания IT-проектов под ключ обратитесь к нашим партнёрам (ссылка https://cloud.yandex.ru/partners/find).
+Они помогут вам развернуть 1С в облаке, сделать с нуля интернет-магазин или разработают уникальные digital-решения на базе технологий машинного обучения.'
+    media:
+      video:
+        src:
+        - 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/support_x2.mp4'
+        - 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/support_x2.ogv'
+        - 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/support_x2.webm'
+        - 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/support_x2.png'
+        loop:
+          start: 0
+      image: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/main/support_x2.png'
+    button:
+      text: 'Подробнее о технической поддержке'
+      theme: 'pseudo'
+      url: '/docs/support/overview'
+
+  - type: "slider-block"
+    when: region != 'kz'
+    title:
+      text: 'Более 19 000 клиентов выбрали Yandex Cloud'
+      url: /cases
+    anchor:
+      url: "cases"
+      text: "Кейсы"
+    slidesToShow: 1
+    randomOrder: true
+    arrows: true
+    children:
+    - type: quote
+      text: "Мы выбрали Yandex Cloud за зрелость, потенциал и возможность совместного развития. Для нас облако — это возможность получить ген масштабируемости и внедрить его в ДНК нашего бизнеса"
+      image: 'https://storage.yandexcloud.net/cloud-www-assets/cases/leroy/leroy_cover.png'
+      url: "https://cloud.yandex.ru/cases/leroymerlin"
+      author:
+        firstName: Дмитрий
+        secondName: Шостко,
+        description: Chief Data Officer «Леруа Мерлен Восток»
+      logo: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/companies_logo/leroymerlin.svg'
+    - type: quote
+      text: "Безопасность хранения данных является абсолютным приоритетом для Genotek. Yandex Cloud дает нам и нашим клиентам уверенность в том, что генетические и другие чувствительные данные надёжно защищены"
+      image: 'https://storage.yandexcloud.net/cloud-www-assets/cases/genotek/genotek_cover.png'
+      author:
+        firstName: Валерий 
+        secondName: Ильинский,
+        description: генеральный директор Genotek
+      url: "https://cloud.yandex.ru/cases/genotek"
+      logo: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/companies_logo/genotek.svg'
+    - type: quote
+      text: "Модерация детского контента — очень чувствительная и непростая тема. Решение, использующее современные технологии Yandex Cloud, ускоряет обработку контента и существенно снижает репутационные риски"
+      image: 'https://storage.yandexcloud.net/cloud-www-assets/cases/yode-group/yode-group_cover.png'
+      url: "https://cloud.yandex.ru/cases/yode-group"
+      author:
+        firstName: Михаил
+        secondName: Ярцев,
+        description: директор по маркетингу торговой сети «Пятёрочка»
+      logo: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/companies_logo/5ka.svg'
+    - type: quote
+      text: "Мы получили инфраструктуру, которую можно масштабировать буквально в течение часа и быстро свернуть. И все это не выливается в колоссальные бюджеты, согласования покупки железа и его поддержку"
+      logo: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/companies_logo/mvideo.svg'
+      image: 'https://storage.yandexcloud.net/cloud-www-assets/cases/mvideo/mvideo_cover.png'
+      url: "https://cloud.yandex.ru/cases/mvideo"
+      author:
+        firstName: Евгений
+        secondName: Воробей,
+        description: руководитель направления разработки «М.Видео-Эльдорадо»
+    - type: quote
+      text: "С Yandex Cloud каждый разработчик может без труда получить свое изолированное окружение и так же просто его выключить, когда оно больше не требуется. С такой же лёгкостью мы можем тиражировать production-окружения под нужды бизнеса"
+      image: 'https://storage.yandexcloud.net/cloud-www-assets/cases/pik_digital/pik_digital_cover.png'
+      author:
+        firstName: Юрий
+        secondName: Игнатов,
+        description: ведущий инженер Express 42
+      url: "https://cloud.yandex.ru/cases/pik-digital"
+      logo: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/companies_logo/pik.svg'
+    - type: quote
+      text: "Мы доверили Yandex Cloud свою микросервисную инфраструктуру, поскольку убедились в их профессионализме и соблюдении SLA. Стоимость облака для нас равнозначна стоимости одного специалиста по инфраструктуре"
+      image: 'https://storage.yandexcloud.net/cloud-www-assets/cases/renlife/renlife_cover.png'
+      author:
+        firstName: Александр
+        secondName: Мольский,
+        description: директор ИТ департамента страховой компании «Ренессанс Жизнь»
+      url: "https://cloud.yandex.ru/cases/renlife"
+      logo: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/companies_logo/renlife.svg'
+
+  - type: "slider-block"
+    when: region == 'kz'
+    title:
+      text: 'Более 19 000 клиентов выбрали Yandex Cloud'
+      url: /cases
+    anchor:
+      url: "cases"
+      text: "Кейсы"
+    slidesToShow: 1
+    randomOrder: true
+    arrows: true
+    children:
+    - type: quote
+      text: "Мы выбрали Yandex Cloud за зрелость, потенциал и возможность совместного развития. Для нас облако — это возможность получить ген масштабируемости и внедрить его в ДНК нашего бизнеса"
+      image: 'https://storage.yandexcloud.net/cloud-www-assets/cases/leroy/leroy_cover.png'
+      url: "https://cloud.yandex.com/ru-kz/cases/leroymerlin"
+      author:
+        firstName: Дмитрий
+        secondName: Шостко,
+        description: Chief Data Officer «Леруа Мерлен Восток»
+      logo: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/companies_logo/leroymerlin.svg'
+    - type: quote
+      text: "Безопасность хранения данных является абсолютным приоритетом для Genotek. Yandex Cloud дает нам и нашим клиентам уверенность в том, что генетические и другие чувствительные данные надёжно защищены"
+      image: 'https://storage.yandexcloud.net/cloud-www-assets/cases/genotek/genotek_cover.png'
+      author:
+        firstName: Валерий 
+        secondName: Ильинский,
+        description: генеральный директор Genotek
+      url: "https://cloud.yandex.com/ru-kz/cases/genotek"
+      logo: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/companies_logo/genotek.svg'
+    - type: quote
+      text: "Простота и удобство использования сервиса распознавания речи Yandex Speechkit позволили нашему инженеру оперативно решить вопросы интеграции нашей учётной системы с возможностями Yandex Cloud"
+      image: 'https://storage.yandexcloud.net/cloud-www-assets/cases/gazprom/gazprom_cover2.jpg'
+      author:
+        firstName: Александр
+        secondName: Попов,
+        description: начальник отдела информационных технологий, телекоммуникаций и связи «Газпром межрегионгаз Ухта»
+      url: "https://cloud.yandex.com/ru-kz/cases/gazprom"
+      logo: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/companies_logo/gazprom.svg'
+    - type: quote
+      text: "Модерация детского контента — очень чувствительная и непростая тема. Решение, использующее современные технологии Yandex Cloud, ускоряет обработку контента и существенно снижает репутационные риски"
+      image: 'https://storage.yandexcloud.net/cloud-www-assets/cases/yode-group/yode-group_cover.png'
+      url: "https://cloud.yandex.com/ru-kz/cases/yode-group"
+      author:
+        firstName: Михаил
+        secondName: Ярцев,
+        description: директор по маркетингу торговой сети «Пятёрочка»
+      logo: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/companies_logo/5ka.svg'
+    - type: quote
+      text: "Мы получили инфраструктуру, которую можно масштабировать буквально в течение часа и быстро свернуть. И все это не выливается в колоссальные бюджеты, согласования покупки железа и его поддержку"
+      logo: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/companies_logo/mvideo.svg'
+      image: 'https://storage.yandexcloud.net/cloud-www-assets/cases/mvideo/mvideo_cover.png'
+      url: "https://cloud.yandex.com/ru-kz/cases/mvideo"
+      author:
+        firstName: Евгений
+        secondName: Воробей,
+        description: руководитель направления разработки «М.Видео-Эльдорадо»
+    - type: quote
+      text: "С Yandex.Cloud каждый разработчик может без труда получить свое изолированное окружение и так же просто его выключить, когда оно больше не требуется. С такой же лёгкостью мы можем тиражировать production-окружения под нужды бизнеса"
+      image: 'https://storage.yandexcloud.net/cloud-www-assets/cases/pik_digital/pik_digital_cover.png'
+      author:
+        firstName: Юрий
+        secondName: Игнатов,
+        description: ведущий инженер Express 42
+      url: "https://cloud.yandex.com/ru-kz/cases/pik-digital"
+      logo: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/companies_logo/pik.svg'
+    - type: quote
+      text: "Мы доверили Yandex.Cloud свою микросервисную инфраструктуру, поскольку убедились в их профессионализме и соблюдении SLA. Стоимость облака для нас равнозначна стоимости одного специалиста по инфраструктуре"
+      image: 'https://storage.yandexcloud.net/cloud-www-assets/cases/renlife/renlife_cover.png'
+      author:
+        firstName: Александр
+        secondName: Мольский,
+        description: директор ИТ департамента страховой компании «Ренессанс Жизнь»
+      url: "https://cloud.yandex.com/ru-kz/cases/renlife"
+      logo: 'https://storage.yandexcloud.net/cloud-www-assets/constructor/companies_logo/renlife.svg'
+
+  - type: "questions-block"
+    when: region == 'kz'
+    anchor:
+      text: Вопросы и ответы
+      url: questions
+    title: Вопросы и ответы
+    items:
+        - title: Я могу работать с персональными данными резидентов Казахстана в облаке Yandex Cloud?
+          text: 'Да, можете. При этом необходимо учитывать, что на территории Республики Казахстан сбор и обработка персональных данных могут осуществляться собственником и (или) оператором/третьим лицом при условии согласия субъекта или его законного представителя и ограничиваются конкретным перечнем персональных данных, подлежащих сбору и обработке, а также достижением конкретных, заранее определенных и законных целей. В настоящий момент для решения ваших задач по анализу, обработке и обогащению данных будут использоваться собственные дата-центры Яндекса, которые расположены на территории Российской Федерации. Действующим законодательством Республики Казахстан допускается трансграничная передача данных (п. 2 статьи 16 Закона РК "О персональных данных и их защите" от 02.01.21 г. № 399-VI). При этом, учитывая действующие положения законодательства Республики Казахстан о хранении персональных данных на территории страны, необходимо выполнение вышеуказанных условий для осуществления параллельного хранения персональных данных в базе, находящейся на территории другого государства. Компания Яндекс уважает и соблюдает действующее законодательство в странах присутствия, заботясь, в том числе, о безопасности данных своих пользователей. Безопасность платформы Yandex Cloud обеспечивается в соответствии с требованиями международных стандартов и регламентов по защите данных — ISO, PCI DSS, GDPR. За отдельными рекомендациями по вопросам обработки персональных данных, в том числе, их классификации на общедоступные и персональные данные ограниченного доступа, мы также рекомендуем обращаться к соответствующим специалистам, лицензированным согласно требованиями законодательства Республики Казахстан.'
+          link:
+            url: /security
+            text: Безопасность
+            theme: normal
+            arrow: true
+        - title: Как заключается договор с Yandex Cloud?
+          text: Yandex Cloud работает с физическими, организациями и ИП по договору (ссылка https://cloud.yandex.ru/docs/billing/concepts/contract), который заключается путем принятия оферты. Кроме того, организации и ИП Казахстана могут заключить договор с двусторонним подписанием. Для этого необходимо отправить заявку (ссылка #contact-form) и обсудить условия подписания с менеджером.
+        - title: В какой валюте и как можно оплачивать услуги Yandex Cloud?
+          text: 'Резиденты Республики Казахстан пополняют лицевой счет и оплачивают потребленные ресурсы в тенге (₸). Способ оплаты зависит от юридического статуса: организациям и ИП доступен перевод с банковской карты или расчётного счёта, физическим лицам только перевод с банковской карты.'
+          link:
+            url: /docs/billing/payment/index
+            text: Биллинг
+            theme: normal
+            arrow: true
+
+
+  - type: 'info-block'
+    title: 'Готовы подключиться?'
+    buttons:
+    - text: 'Подключиться'
+      theme: 'raised'
+      url: 'https://console.cloud.yandex.${tld}/'
+    - text: 'Задать вопрос'
+      theme: 'pseudo-special'
+      url: '#contact-form'
+    sectionsTitle: 'Полезные ссылки'
+    links:
+    - text: 'Найти партнёра'
+      url: '/partners/find'
+    - text: 'Тарифы'
+      url: '/prices'
+    - text: 'Чат сообщества'
+      url: 'https://t.me/yandexcloudnews'
